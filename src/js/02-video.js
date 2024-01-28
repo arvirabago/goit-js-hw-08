@@ -1,16 +1,16 @@
-// Importing styles and libraries
+
 import '../css/common.css';
 import Player from '@vimeo/player';
 import { throttle } from 'lodash';
 
-// Constant for localStorage key
+
 const TIME_KEY = 'videoplayer-current-time';
 
-// Selecting the Vimeo iframe and creating a new Player instance
+
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 
-// Event handler for 'timeupdate' event
+
 const onPlay = throttle(function (data) {
   const stringifyData = JSON.stringify(data);
   localStorage.setItem(TIME_KEY, stringifyData);

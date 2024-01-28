@@ -47,5 +47,5 @@ function loadFormData() {
 function clearFormData() {
   localStorage.removeItem(STORAGE_KEY);
   formData = {};
-  populateTextarea(); // Clear the form fields visually
+  populateTextarea(); 
 }
